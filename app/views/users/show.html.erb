@@ -1,0 +1,11 @@
+<h1>ユーザー情報</h1>
+<div class="container mb-3">
+  <div class="row">
+    <%= @user.name %>
+  </div>
+  <div class="row">
+    <%= @user.email %>
+  </div>
+</div>
+<%= link_to "アカウント編集", edit_user_path(current_user), class: "btn btn-primary" %>
+<%= link_to "アカウント削除", user_path(current_user), data: {turbo_method: :delete}, class: "btn btn-danger" %>

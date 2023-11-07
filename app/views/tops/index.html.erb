@@ -1,0 +1,24 @@
+<div class="container-sm mt-3">
+
+  <% if logged_in? %>
+    <div data-controller="chatgpt">
+      <div class="row">
+        <%= form_with method: :post, scope: :message do |form| %>
+          <%= form.label "プロンプト", class: "form-label" %>
+          <%= form.text_field "プロンプト", data: {chatgpt_target: "input"}, class: "form-control" %>
+          <%= form.submit "送信", data: {action: "chatgpt#askChatgpt"}, class: "btn btn-primary btn-sm mt-2" %>
+        <% end %>
+      </div>
+
+      <%= render partial: 'shared/messages' %>
+
+    </div>
+  <% else %>
+
+    <%= render partial: 'shared/notlogin' %>
+
+  <% end %>
+
+</div>
+
+

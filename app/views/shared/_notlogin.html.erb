@@ -1,0 +1,26 @@
+<p class="text-center">
+  ソクラテス、プラトン、アリストテレスに質問できるサービスです。<br>
+  ChatGPTが3人の哲学者になり代わり、質問内容に対して回答します。<br>
+  ご利用頂くには、アカウントを作成しログイン頂く必要があります。<br>
+</p>
+
+
+<div class="row justify-content-center">
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-header text-center">アカウントをお持ちの方</div>
+      <div class="card-body mx-auto">
+        <%= link_to "ログインする", new_session_path, class: "btn btn-outline-primary" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-header text-center">新規登録の方</div>
+      <div class="card-body mx-auto">
+        <%= link_to "新規登録", new_user_path, class: "btn btn-outline-secondary" %>
+      </div>
+    </div>
+  </div>  
+</div>
