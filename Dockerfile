@@ -1,5 +1,5 @@
 FROM ruby:3.2.2
-RUN apt-get update -qq && apt-get install -y build-essential nodejs && apt-get install -y imagemagick
+RUN apt-get update -qq && apt-get install -y build-essential nodejs && apt-get install -y imagemagick mariadb-client
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
