@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
+  host: localhost
   database: app_production
   username: root
   password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
