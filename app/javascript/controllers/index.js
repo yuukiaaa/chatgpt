@@ -10,8 +10,8 @@ eagerLoadControllersFrom("controllers", application)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
 
-import ChatgptController from "./chatgpt_controller"
+import ChatgptController from "controllers/chatgpt_controller"
 application.register("chatgpt", ChatgptController);
 
-import TestController from "./test_controller"
+import TestController from "controllers/test_controller"
 application.register("test", TestController);
