@@ -3,11 +3,12 @@ require 'uri'
 require 'json'
 
 class ChatgptService
-  def initialize(message, model='gpt-3.5-turbo')
+  def initialize(message, model='gpt-3.5-turbo', role)
     @api_key = Rails.application.credentials[:chatgpt][:api_key]
     @api_url = 'https://api.openai.com/v1/chat/completions'
     @model = model
-    @system_message = "ユーザからの質問に対して100字以内で誠実に回答すること。"
+    @role = role
+    @system_message = "ユーザからの質問に対して哲学者#{@role}になりきって100字以内で誠実に回答すること。"
     @message = message
     @headers =  {
       'Content-Type': 'application/json',
