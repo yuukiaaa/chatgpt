@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "tops#index"
 
-  resources :tops
+  resources :tops, only: [:index]
   post '/tops/message', to: 'tops#message', as: 'message_tops'
+  get '/tops/about', to: 'tops#about'
 
   resources :users, except: :index
 

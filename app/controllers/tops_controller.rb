@@ -15,4 +15,7 @@ class TopsController < ApplicationController
         end
     end
 
+    def about
+    end
+
 end
